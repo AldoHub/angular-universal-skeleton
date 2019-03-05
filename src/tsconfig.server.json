@@ -1,0 +1,33 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+      "outDir": "../out-tsc/app",
+      "baseUrl": "./",
+      // Set the module format to "commonjs":
+      "module": "commonjs",
+      "types": []
+    },
+    "exclude": [
+      "test.ts",
+      "**/*.spec.ts"
+    ],
+    // Add "angularCompilerOptions" with the AppServerModule you wrote
+    // set as the "entryModule".
+    "angularCompilerOptions": {
+      "entryModule": "app/app.server.module#AppServerModule"
+    }
+  }
+
+
+
+  /*
+    add the next info the the angular.json inside architect, under "build"
+     "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/my-project-server",
+            "main": "src/main.server.ts",
+            "tsConfig": "src/tsconfig.server.json"
+          }
+  
+  */
